@@ -7,6 +7,7 @@
 <title>Scripting Tag</title>
 </head>
 <body>
+<!-- 스크립틀릿 태그에 지역변수 사용하기 -->
 	<%
 		int a = 2;
 		int b = 3;
