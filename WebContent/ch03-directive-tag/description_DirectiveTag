@@ -22,19 +22,7 @@ JSP 페이지를 수정하여 다시 컴파일하는 경우에만 역할을 수�
 	
 	하나의 page 디렉티브 태그에 하나/여러개의 속성을 설정할 수 있고 여러개의 속성마다 개별적으로 page 디렉티브 태그를 선언할 수 있다.
 	그리고 import 속성을 제외한 속성은 JSP 페이지에 한번씩만 설정할 수 있다.
-	
-	
-	1. language 속성
-	: 현재 JSP 페이지에서 사용할 프로그래밍 언어를 설정하는데 사용
-	<%@ page language = "java" %>
-	
-	2.contentType 속성
-	: 현재 JSP 페이지의 콘텐츠 유형(MIME-type)을 설정하는 데 사용
-	<%@ page contentType = "text/html" %>
-	
-	:문자열 세트(charset)를 설정하여 JSP 페이지의 전체 문자열을 변경할 수 있다.
-	<%@ page contentType = "text/html:charset=utf-8"%>
-	
+		
 	==
 	
 	
