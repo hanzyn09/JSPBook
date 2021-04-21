@@ -10,11 +10,12 @@
 <meta charset="UTF-8">
 <title>Welcome</title>
 </head>
+
 <body>
-	<%@ include file = "menu.jsp" %>
+	<%@ include file="menu.jsp" %>
 	<%!
-		String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
-		String tagline = "Welcome to Web Market!";
+		String greeting = "도서 웹 쇼핑몰";
+		String tagline = "Welcome to Book Market!";
 	%>
 	
 	<div class = "jumbotron">
@@ -28,28 +29,8 @@
 	<div class = "container">
 		<div class = "text-center">
 			<h3><%= tagline %></h3>
-			
-			<%--현재 접속 시간 출력--%>
-	<%
-		Date day = new Date();
-		String am_pm;
-		int hour = day.getHours();
-		int minute = day.getMinutes();
-		int second = day.getSeconds();
-		
-		if(hour/12 == 0) am_pm = "AM";
-		else{
-			am_pm = "PM";
-			hour = hour - 12;
-		}
-		String CT = hour + ":" + minute + ":" + second + " " + am_pm;
-		out.println("현재 접속 시각: " + CT + "\n");
-		
-	%>
 		</div>
 	</div>
-	
-	<%@ include file = "footer.jsp" %>
-	
+	<%@ include file="footer.jsp" %>
 </body>
 </html>
