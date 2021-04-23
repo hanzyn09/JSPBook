@@ -53,4 +53,24 @@ XML 형식 <jsp: /> 으로 선언한다.
  	데이터를 담는 멤버 변수인 프로퍼티 + 데이터를 가져오거나 저장하는 메서드로 구성된다.
  	
  	useBean : JSP 페이지에서 자바빈즈를 사용하기 위해 실제 자바클래스를 선언하고 초기화하는 태그.
+ 	1) 자바 클래스는 java.io.Serializable 인터페이스 구현
+ 	2) 인수가 없는 기본 생성자 필요
+ 	3) 모든 멤버 변수인 프로퍼티는 private 접근 지정자로 설정
+ 	4) 모든 멤버 변수인 프로퍼티는 Getter/Setter() 메서드가 존재
+ 	<jsp:useBean id="자바빈즈 식별 이름" class= "자바빈즈 이름" scope="범위"/>
+ 	
+ 	setProperty 액션태그 : useBean 액션태그와 함께 자바빈즈의 Setter() 메서드에 접근하여
+ 	자바빈즈의 멤버 변수인 프로퍼티의 값을 저장하는 태그
+ 	<jsp:setProperty id="자바빈즈 식별이름" property="프로퍼티 이름" value="값"/>
+ 		출력 : <% out.println("아이디:" + member.getId()) %>
+ 	setProperty 액션태그를 사용하려면 useBean 액션태그에 id 속성 값이 설정되어 있어야 함.
+ 	<jsp:useBean id="" class="" scope="page"/>
+ 	1) 요청 파라미터 이름과 자바빈즈 프로퍼티 이름이 일치하는 경우
+ 	2) 요청 파라미터 이름과 자바빈즈 프로퍼티 이름이 일치하지 않는 경우 : jsp 에서 param 전송
+ 	3) 요청 파라미터 이름과 자바빈즈의 프로퍼티 이름이 모두 일치하는 경우가 있다. : jsp 에서 property="*" 처리
+ 	
+ 	getProperty 액션태그 : useBean 액션태그와 함게 자바빈즈의 Getter() 메서드에 접근하여
+ 	자바빈즈의 멤버변수인 프로퍼티의 값을 가져오는 ㅐㅌ그
+ 	<jsp:getProperty name="자바빈즈 식별이름" property="프로퍼티 이름"/>
+ 		출력: <% out.prinln(member.getId()); %>
  	
